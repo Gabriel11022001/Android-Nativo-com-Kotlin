@@ -1,0 +1,6 @@
+<resources>
+    <!--
+        arquivo onde defino textos do app
+    -->
+    <string name="app_name">primeiro-app</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">app-motivacoes</string>
+    <string name="txt_titulo_apresentacao">Vamos começar?</string>
+    <string name="hint_edt_nome_usuario">Qual seu nome?</string>
+    <string name="txt_btn_continuar">Continuar</string>
+    <string name="txt_btn_gerar_nova_frase">Gerar nova frase</string>
+</resources>

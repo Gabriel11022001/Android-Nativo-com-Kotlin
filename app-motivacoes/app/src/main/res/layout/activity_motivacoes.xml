@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MotivacoesActivity" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/vermelho_escuro"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp" >
+
+        <ImageView
+            android:id="@+id/btn_todos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_feliz"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            android:src="@drawable/ic_todos" />
+
+        <!--
+            app:tint -> definir a cor do ícone
+        -->
+        <ImageView
+            android:id="@+id/btn_feliz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/btn_todos"
+            app:layout_constraintTop_toTopOf="@id/btn_todos"
+            app:layout_constraintBottom_toBottomOf="@id/btn_todos"
+            app:layout_constraintEnd_toStartOf="@id/btn_positivo"
+            android:src="@drawable/ic_pessoa_feliz"
+            app:tint="@color/vermelho_claro" />
+
+        <ImageView
+            android:id="@+id/btn_positivo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/btn_feliz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_feliz"
+            app:layout_constraintBottom_toBottomOf="@id/btn_feliz"
+            android:src="@drawable/ic_sol"
+            app:tint="@color/vermelho_claro" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_bem_vindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seja bem vindo"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/constraint_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/txt_mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups." />
+
+    <View
+        android:id="@+id/view_separador"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:background="@color/vermelho_escuro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_mensagem"
+        android:elevation="6dp" />
+    
+    <Button
+        android:id="@+id/btn_nova_mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/vermelho_escuro"
+        android:text="@string/txt_btn_gerar_nova_frase"
+        android:textAllCaps="true"
+        android:padding="12dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    O LinearLayout representa o viewgroup
+    em que eu consigo posicionar os elementos
+    de forma linear, ou seja, um após o outro
+    android:orientation -> define a orientação de como
+    vamos posicionar os elementos na interface
+    como a orientação está como vertical, os
+    elementos vão se posicionar um abaixo do outro
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical" >
+
+    <!--
+        elemento de interface
+        que representa textos
+    -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gabriel Rodrigues dos Santos"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gabriel Rodrigues dos Santos"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gabriel Rodrigues dos Santos"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gabriel Rodrigues dos Santos"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp" />
+
+    <!--
+        android:background -> define a cor de fundo do elemento
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/black" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Texto"
+            android:textColor="@color/white"
+            android:layout_weight="1" />
+
+        <!--
+            Também posso definir o background para
+            o TextView
+            android:textColor -> alterar a cor do elemento
+            android:textAlignment -> alinhamento do texto
+        -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Texto"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:background="@color/design_default_color_error" />
+
+    </LinearLayout>
+
+    <!--
+        android:gravity -> alinhamento interno do elemento
+        android:layout_gravity -> alinhamento do elemento
+        em relação ao elemento pai
+        android:padding -> espaçamento interno do elemento
+        android:textStyle -> definir estilos para o texto, exemplo, se o
+        texto vai ser negrito, italico
+        android:textAllCaps -> definir se o texto vai ficar
+        todo em maíusculo ou não
+        android:fontFamily -> definir a fonte do texto
+    -->
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_blue_dark"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Texto de teste"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <!--
+        elemento de interface que representa um campo
+        de texto para o usuário digitar algo
+        android:hint -> vai ser o placeholder do campo
+        de texto
+        android:inputType -> tipo do texto digitado, define
+        o layout do teclado do celular que vai aparecer
+        quando o usuário for digitar no campo
+        android:drawableEnd -> adicionar um ícone
+        no lado direito do EditText
+    -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Digite seu nome..."
+        android:padding="8dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:inputType="textAutoComplete"
+        android:drawableEnd="@drawable/ic_pessoa" />
+
+    <Button
+        android:id="@+id/btn_ir_segunda_tela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Segunda tela"
+        android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/btn_ir_terceira_tela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terceira tela"
+        android:layout_margin="16dp" />
+
+</LinearLayout>

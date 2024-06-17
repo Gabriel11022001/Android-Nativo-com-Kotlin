@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">App Gastos Viagem</string>
+    <string name="txt_distancia">Distância</string>
+    <string name="txt_total_km">Total de KM rodados</string>
+    <string name="txt_preco_combustivel_por_litro">Preço do combustível por litro</string>
+    <string name="txt_autonomia">Autonomia</string>
+    <string name="txt_quantos_litros_veiculo_faz">Quantos litros o veículo faz com 1 litro</string>
+    <string name="txt_seu_gasto_total_sera_de">Seu gasto total será de:</string>
+</resources>

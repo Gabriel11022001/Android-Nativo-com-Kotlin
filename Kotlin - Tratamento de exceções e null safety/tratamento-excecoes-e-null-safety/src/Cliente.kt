@@ -1,0 +1,1 @@
+data class Cliente(var id: Int, var nome: String)
