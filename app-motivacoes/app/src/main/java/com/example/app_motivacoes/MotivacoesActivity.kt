@@ -1,5 +1,7 @@
 package com.example.app_motivacoes
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
@@ -8,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.app_motivacoes.models.FraseMotivacional
@@ -38,8 +41,18 @@ class MotivacoesActivity : AppCompatActivity(), OnClickListener {
     }
 
     private fun apresentarBemVindo() {
-        val nomeUsuario: String = intent.getStringExtra("nome_usuario")!!
-        this.txtBemVindo.text = "Seja bem vindo ${ nomeUsuario }"
+        // val nomeUsuario: String = intent.getStringExtra("nome_usuario")!!
+        // this.txtBemVindo.text = "Seja bem vindo ${ nomeUsuario }"
+        val sharedPreferences: SharedPreferences = applicationContext.getSharedPreferences("preferencias_app_motivacoes", Context.MODE_PRIVATE)
+
+        val nomeUsuarioLogado: String = sharedPreferences.getString("nome_usuario_logado", "").toString()
+
+        if (nomeUsuarioLogado.isEmpty()) {
+            this.txtBemVindo.text = "Seja bem vindo!"
+        } else {
+            this.txtBemVindo.text = "Seja bem vindo ${ nomeUsuarioLogado }"
+        }
+
     }
 
     private fun mapearElementosInterface() {
@@ -69,6 +82,22 @@ class MotivacoesActivity : AppCompatActivity(), OnClickListener {
         this.txtMensagem.text = mensagemMotivacional
     }
 
+    private fun estilizarBotaoCategoria(categoriaSelecionada: String) {
+        // alterar as cores das imagens
+        this.btnTodos.setColorFilter(ContextCompat.getColor(applicationContext, R.color.vermelho_claro))
+        this.btnFeliz.setColorFilter(ContextCompat.getColor(applicationContext, R.color.vermelho_claro))
+        this.btnPositivo.setColorFilter(ContextCompat.getColor(applicationContext, R.color.vermelho_claro))
+
+        if (categoriaSelecionada.equals("todos")) {
+            this.btnTodos.setColorFilter(ContextCompat.getColor(applicationContext, R.color.white))
+        } else if (categoriaSelecionada.equals("feliz")) {
+            this.btnFeliz.setColorFilter(ContextCompat.getColor(applicationContext, R.color.white))
+        } else {
+            this.btnPositivo.setColorFilter(ContextCompat.getColor(applicationContext, R.color.white))
+        }
+
+    }
+
     override fun onClick(p0: View?) {
 
         if (p0!!.id == R.id.btn_nova_mensagem) {
@@ -87,6 +116,7 @@ class MotivacoesActivity : AppCompatActivity(), OnClickListener {
             }
 
             trocarCategoria(categoria)
+            this.estilizarBotaoCategoria(categoria)
         }
 
     }
