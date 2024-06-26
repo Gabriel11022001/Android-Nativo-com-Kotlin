@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <!--
+        O ConstraintLayout é um elemento de interface, no caso um
+        ViewGroup que serve para posicionar os elementos baseado em
+        constraints
+        -> possui maior performace que os outros ViewGroup
+        -> sempre devo definir nos elementos filhos a posição X e Y
+        -> o ideal é evitar match_parent, e definir o tamanho dos elementos utilizando
+        0dp, definindo a constraint do inicio e do fim, o elemento ocupa a largura do ViewGroup
+        que possui ele
+    -->
+
+    <!--
+        app:layout_constraintStart_toStartOf -> o seu inicio vai ficar no inicio
+        do elemento que eu definir
+        app:layout_constraintTop_toTopOf -> o topo vai ficar no topo do elemento
+        que eu definir
+    -->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Primeiro Botão"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
+        app:layout_constraintEnd_toEndOf -> o final do elemento vai se posicionar
+        no final do elemento que eu definir
+        app:layout_constraintTop_toBottomOf -> o topo vai ficar na parte de baixo
+        do elemento que eu definir
+    -->
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Segundo Botão"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_1"
+        android:layout_margin="20dp"  />
+
+    <!--
+        app:layout_constraintHorizontal_bias -> escorregar o elemento na horizontal
+        app:layout_constraintVertical_bias -> escorregar o elemento na vertical
+    -->
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terceiro Botão"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quarto botão"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="3" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quinto botão"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_4"
+        app:layout_constraintTop_toTopOf="@id/btn_4"
+        app:layout_constraintBottom_toBottomOf="@id/btn_4"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintHorizontal_weight="2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

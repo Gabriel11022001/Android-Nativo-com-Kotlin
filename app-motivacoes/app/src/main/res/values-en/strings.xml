@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        quando o dispositivo do usuário estiver em ingles,
+        os textos serão consultados nesse arquivo, caso não exista
+        tradução para uma string nesse arquivo, por padrão, o texto definido
+        será o que estiver no strings.xml padrão
+    -->
+    <string name="app_name">App-Motivations</string>
+    <string name="txt_titulo_apresentacao">Ready to get started?</string>
+    <string name="hint_edt_nome_usuario">What\'s your name?</string>
+    <string name="txt_btn_continuar">Continue</string>
+    <string name="txt_btn_gerar_nova_frase">Generate New Phrase</string>
+</resources>

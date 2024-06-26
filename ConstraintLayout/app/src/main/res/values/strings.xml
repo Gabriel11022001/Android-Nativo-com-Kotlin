@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">app-estudos-constraint-layout</string>
+    <string name="txt_hint_login">Login...</string>
+    <string name="txt_hint_senha">Senha...</string>
+    <string name="txt_btn_login">Entrar</string>
+    <string name="txt_cadastrarse">Ainda não está cadastrado? Cadastre-se</string>
+</resources>
