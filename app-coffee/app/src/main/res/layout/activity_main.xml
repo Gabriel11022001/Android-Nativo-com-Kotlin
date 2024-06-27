@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_cabecalho"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@color/marrom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="5dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_retornar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cappuccino"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_relogio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_cabecalho"
+        app:layout_constraintEnd_toStartOf="@id/img_coracao"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15 minutos"
+        app:layout_constraintStart_toStartOf="@id/img_relogio"
+        app:layout_constraintTop_toBottomOf="@id/img_relogio"
+        app:layout_constraintEnd_toEndOf="@id/img_relogio"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/img_coracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_coracao"
+        app:layout_constraintStart_toEndOf="@id/img_relogio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_relogio"
+        app:layout_constraintBottom_toBottomOf="@id/img_relogio" />
+
+    <TextView
+        android:id="@+id/tct_coracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="54234"
+        app:layout_constraintStart_toStartOf="@id/img_coracao"
+        app:layout_constraintEnd_toEndOf="@id/img_coracao"
+        app:layout_constraintTop_toBottomOf="@id/img_coracao"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_separador"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/marrom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tct_coracao"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <TextView
+        android:id="@+id/txt_mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum is a placeholder text commonly used in publishing and graphic design to demonstrate the visual form of a document or a typeface without relying on meaningful content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_separador"
+        android:textAlignment="center"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/marrom" />
+
+    <TextView
+        android:id="@+id/txt_titulo_ingredientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredientes"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_mensagem"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/ic_ingrediente_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_seta_direita"
+        app:layout_constraintStart_toStartOf="@id/txt_titulo_ingredientes"
+        app:layout_constraintTop_toBottomOf="@id/txt_titulo_ingredientes"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/txt_ingrediente_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrediente 1"
+        app:layout_constraintStart_toEndOf="@id/ic_ingrediente_1"
+        app:layout_constraintTop_toTopOf="@id/ic_ingrediente_1"
+        app:layout_constraintBottom_toBottomOf="@id/ic_ingrediente_1"
+        android:textStyle="bold"
+        android:textColor="@color/marrom"
+        android:textSize="18sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
